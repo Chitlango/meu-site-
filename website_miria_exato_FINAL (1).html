@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vida Digital no Dia a Dia</title>
+  <style>
+    :root{--primary:#1abc9c;--dark:#2c3e50;--bg:#eef2f5}
+    *{box-sizing:border-box}
+    body { font-family: Arial, sans-serif; margin: 0; background: var(--bg); color: #333; transition: 0.3s; scroll-behavior: smooth; line-height:1.6 }
+    #progress{position:fixed;top:0;left:0;height:5px;background:var(--primary);width:0%;z-index:100}
+    header { background: linear-gradient(135deg,var(--dark),var(--primary)); color: white; padding: 70px 20px; text-align: center; }
+    nav { background: #34495e; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 10; }
+    nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: bold; }
+    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+    .card { background: white; padding: 30px; margin: 25px 0; border-radius: 14px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); opacity: 0; transform: translateY(20px); transition: 0.6s; }
+    .card.show { opacity: 1; transform: translateY(0); }
+    .img-box{background:#ddd; border-radius:10px; margin-top:15px; overflow:hidden}
+    .img-box span{display:block; text-align:center; padding:20px; color:#555}
+    img { width: 100%; display:block }
+    footer { background: var(--dark); color: white; text-align: center; padding: 30px; margin-top:40px }
+    button { padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer; margin-top: 10px; background:var(--primary); color:white }
+    .dark { background: #1e1e1e; color: #eee; }
+    .dark .card { background: #2c2c2c; }
+    #topBtn { position: fixed; bottom: 20px; right: 20px; display: none; background: var(--primary); color: white; border-radius: 50%; padding: 12px; }
+    form input, form textarea{ width:100%;padding:12px;margin-top:10px;border-radius:8px;border:1px solid #ccc }
+  </style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<header>
+  <h1>Vida Digital no Dia a Dia</h1>
+  <p>Por Miriã Chitlango</p>
+  <button onclick="toggleDarkMode()">Modo Escuro</button>
+</header>
+
+<nav>
+  <a href="#intro">Introdução</a>
+  <a href="#impacto">Impacto</a>
+  <a href="#vantagens">Vantagens</a>
+  <a href="#desafios">Desafios</a>
+  <a href="#educacao">Educação</a>
+  <a href="#futuro">Futuro</a>
+  <a href="#curiosidades">Curiosidades</a>
+  <a href="#extra">Uso Responsável</a>
+  <a href="#quiz">Quiz</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<script>
+function handleImgError(img){
+  img.style.display='none';
+  const msg = document.createElement('span');
+  msg.innerText = 'Imagem indisponível (verifique ligação à internet)';
+  img.parentElement.appendChild(msg);
+}
+</script>
+
+<section id="intro"><div class="card"><h2>Introdução</h2>
+<p>A transformação digital redefiniu profundamente a forma como vivemos, comunicamos e trabalhamos. A tecnologia deixou de ser apenas uma ferramenta complementar e passou a ser um elemento central da sociedade moderna.</p>
+<p>Desde dispositivos móveis até plataformas online, a presença digital acompanha-nos constantemente.</p>
+<div class="img-box"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" onerror="handleImgError(this)"></div>
+</div></section>
+
+<section id="impacto"><div class="card"><h2>Impacto</h2>
+<p>A digitalização trouxe eficiência e rapidez em praticamente todas as áreas. A comunicação tornou-se instantânea e global.</p>
+<p>No ambiente profissional surgiram novas formas de trabalho e colaboração.</p>
+<div class="img-box"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" onerror="handleImgError(this)"></div>
+</div></section>
+
+<section id="vantagens"><div class="card"><h2>Vantagens</h2>
+<p>A tecnologia oferece acesso rápido à informação, comunicação eficiente e novas oportunidades de aprendizagem.</p>
+<div class="img-box"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" onerror="handleImgError(this)"></div>
+</div></section>
+
+<section id="desafios"><div class="card"><h2>Desafios</h2>
+<p>Os desafios incluem dependência digital, riscos de privacidade e excesso de informação.</p>
+<div class="img-box"><img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87" onerror="handleImgError(this)"></div>
+</div></section>
+
+<section id="educacao"><div class="card"><h2>Educação</h2>
+<p>A educação digital permite aprendizagem flexível e acessível.</p>
+<div class="img-box"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7" onerror="handleImgError(this)"></div>
+</div></section>
+
+<section id="futuro"><div class="card"><h2>Futuro</h2>
+<p>O futuro inclui inteligência artificial, robótica e novas formas de interação digital.</p>
+<div class="img-box"><img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e" onerror="handleImgError(this)"></div>
+</div></section>
+
+<section id="curiosidades"><div class="card"><h2>Curiosidades</h2>
+<p>- Existem mais dispositivos do que pessoas<br>- A internet conecta bilhões de utilizadores<br>- Smartphones são extremamente poderosos</p>
+<div class="img-box"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" onerror="handleImgError(this)"></div>
+</div></section>
+
+<section id="extra"><div class="card"><h2>Uso Responsável</h2>
+<p>O uso consciente da tecnologia é essencial para equilíbrio e segurança.</p>
+</div></section>
+
+<section id="quiz"><div class="card"><h2>Quiz</h2>
+<p>1. A tecnologia facilita o quê?</p>
+<button onclick="alert('Correto!')">Comunicação</button>
+<button onclick="alert('Errado!')">Nada</button>
+</div></section>
+
+<section id="contacto"><div class="card"><h2>Contacto</h2>
+<p>Entre em contacto para sugestões ou opiniões.</p>
+<form onsubmit="event.preventDefault(); alert('Mensagem enviada com sucesso!');">
+<input type="text" placeholder="Nome completo" required>
+<input type="email" placeholder="Email" required>
+<textarea placeholder="Mensagem" required></textarea>
+<button type="submit">Enviar</button>
+</form>
+</div></section>
+
+<footer>
+  <p>&copy; 2026 - Desenvolvido por Miriã Chitlango</p>
+</footer>
+
+<button id="topBtn" onclick="scrollToTop()">↑</button>
+
+<script>
+function toggleDarkMode() {
+  document.body.classList.toggle('dark');
+}
+const cards = document.querySelectorAll('.card');
+window.addEventListener('scroll', () => {
+  cards.forEach(card => {
+    const top = card.getBoundingClientRect().top;
+    if(top < window.innerHeight - 50){
+      card.classList.add('show');
+    }
+  });
+  document.getElementById('topBtn').style.display = document.documentElement.scrollTop > 200 ? 'block' : 'none';
+  const winScroll = document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  document.getElementById('progress').style.width = (winScroll / height) * 100 + '%';
+});
+function scrollToTop(){
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
